@@ -72,7 +72,7 @@ jobs:
       name: 'Authenticate to GCP'
       uses: 'google-github-actions/auth@v2.0.0'
       with:
-        workload_identity_provider: 'projects/876549733052/locations/global/workloadIdentityPools/tfrm-demo-pool/subject/SUBJECT_ATTRIBUTE_VALUE'
+        workload_identity_provider: 'projects/876549733052/locations/global/workloadIdentityPools/tfrm-demo-pool/providers/github'
         service_account: 'my-sa-demo@neon-rex-429918-j7.iam.gserviceaccount.com'
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
