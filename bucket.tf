@@ -1,18 +1,7 @@
-resource "google_storage_bucket" "static-site" {
-  name          = "image-store.com"
-  location      = "EU"
+resource "google_storage_bucket" "bucket-demo" {
+  name          = "terraform-demo-bucket"
+  location      = "US"
   force_destroy = true
 
-  uniform_bucket_level_access = true
-
-  website {
-    main_page_suffix = "index.html"
-    not_found_page   = "404.html"
-  }
-  cors {
-    origin          = ["http://image-store.com"]
-    method          = ["GET", "HEAD", "PUT", "POST", "DELETE"]
-    response_header = ["*"]
-    max_age_seconds = 3600
-  }
+  public_access_prevention = "enforced"
 }
