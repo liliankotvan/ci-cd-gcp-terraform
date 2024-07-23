@@ -8,7 +8,8 @@ terraform {
 }
 
 provider "google" {
-  project = "neon-rex-429918-j7"
+  project = var.project_name
   region  = "us-central1"
   zone    = "us-central1-c"
 }
+
